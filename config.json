@@ -1,0 +1,5 @@
+{
+  "LOCAL_URL": "http://localhost:5000/avatar/",
+  "ONLINE_URL": "http://localhost:7000/avatar/",
+  "MODE": "PROD"
+}
