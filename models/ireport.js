@@ -1,16 +1,21 @@
 const mongoose = require('mongoose')
 
-const IreportSchema = new mongoose.Schema(
+const ireportSchema = new mongoose.Schema(
   {
-    report: { type: String, required: true },
-    avatar: { type: String},
-    contact: {type: String},
-    risk: {type: String},
-    user: { type: mongoose.Types.ObjectId, ref: 'users' },
+    description: { type: String, required: true },
+    avatar: { type: String },
+    risk: { type: String },
+    date: { type: String },
+    user_id: { type: String, ref: 'users' },
+    isRead: { type: Boolean, default: false },
+    responded: { type: Boolean, default: false },
+    dateAttendedTo: { type: String },
   },
   { timestamps: true }
 );
 
-const Ireport = mongoose.model('ireports', IreportSchema)
+
+
+const Ireport = mongoose.model('ireports', ireportSchema)
 
 module.exports = Ireport;

@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-
 const routes = require('./routes/route.index');
+const path = require('path')
 
-
-const URL = 'mongodb://localhost:27017/naval';
+const URL ='mongodb+srv://Eneojo10:sundayameh150@cluster0.vuwsg8s.mongodb.net/naval';
+// const URL = 'mongodb://localhost:27017/naval';
 const PORT = 5000;
 
 
@@ -17,7 +17,7 @@ mongoose.connection.on('error', (e) => console.log(e));
 
 app.use(cors());
 app.use(express.json());
-
+app.use('/banner',express.static(path.join(__dirname,'banners')))
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.get('/', function (req, res){
