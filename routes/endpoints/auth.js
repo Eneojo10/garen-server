@@ -107,8 +107,7 @@ const routes = function (router) {
           return res.status(500).json({ msg: 'Server error occurs' });
         }
 
-        // console.log('User Role:', user.role);
-        // console.log('Hashed Password:', user.password);
+        
 
         if (!result) {
           return res.status(401).json({ msg: 'Wrong password...' });

@@ -21,10 +21,20 @@ const ArtisanSchema = new mongoose.Schema({
     required: true,
   },
 
-  // estate_id: {
-  //   type: String,
-  //   ref: 'estates',
-  // },
+  artisanEmail: {
+    type: String,
+    unique: true,
+  },
+
+  aboutArtisan: {
+    type: String,
+    required: true,
+  },
+
+  artisanId: {
+    type: Number,
+    required: true,
+  },
 
   user_id: {
     type: String,
