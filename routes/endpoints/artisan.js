@@ -42,7 +42,6 @@ const routes = function (app) {
           aboutArtisan: req.body.aboutArtisan,
           artisanId: req.body.artisanId,
           user_id: req.body.user_id,
-          // estate_id: req.body.estate_id,
         });
 
         const createdArtisan = await newArtisan.save();
